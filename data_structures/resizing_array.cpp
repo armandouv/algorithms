@@ -42,7 +42,7 @@ public:
 
     // Move constructor
     resizing_array(resizing_array<T> &&base_arr) noexcept
-            : elements{base_arr.elements},
+            : elements{std::move(base_arr.elements)},
               v_size{base_arr.v_size},
               real_size{base_arr.real_size} {
         base_arr.elements = nullptr;
@@ -67,7 +67,7 @@ public:
     resizing_array<T> &operator=(resizing_array<T> &&base_arr) noexcept {
         v_size = base_arr.v_size;
         real_size = base_arr.real_size;
-        elements = base_arr.elements;
+        elements = std::move(base_arr.elements);
 
         base_arr.v_size = 0;
         base_arr.real_size = 0;
