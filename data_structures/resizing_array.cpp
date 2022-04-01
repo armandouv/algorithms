@@ -45,7 +45,6 @@ public:
             : elements{std::move(base_arr.elements)},
               v_size{base_arr.v_size},
               real_size{base_arr.real_size} {
-        base_arr.elements = nullptr;
         base_arr.v_size = 0;
         base_arr.real_size = 0;
     }
@@ -71,7 +70,6 @@ public:
 
         base_arr.v_size = 0;
         base_arr.real_size = 0;
-        base_arr.elements = nullptr;
 
         return *this;
     }
