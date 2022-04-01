@@ -7,8 +7,8 @@
 
 typedef unsigned long long ull;
 
-constexpr ull INITIAL_SIZE = 10;
-constexpr ull GROW_FACTOR = 2;
+constexpr ull INITIAL_SIZE{10};
+constexpr ull GROW_FACTOR{2};
 
 template<typename T>
 class resizing_array {
