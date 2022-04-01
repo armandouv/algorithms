@@ -105,6 +105,6 @@ public:
             elements = new_elements;
         }
 
-        return elements[v_size - 1];
+        return elements[--v_size];
     }
 };
